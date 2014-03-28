@@ -1,0 +1,9 @@
+{
+    "name": "mercatorProjection",
+    "description": "convert lat/lon between 900913 and 4326",
+    "version": "0.1.0",
+    "main": "index.js",
+    "dependencies": {
+        "geohash": "git://github.com/maxogden/geohash-js#master"
+    }
+}
