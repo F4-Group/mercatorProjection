@@ -7,19 +7,23 @@ var DEG_TO_RAD = Math.PI / 180;
 var RAD_TO_DEG = 180 / Math.PI;
 
 function convertLon900913To4326(lon) {
+    lon = parseFloat(lon);
     return lon * M_TO_DEG;
 }
 
 function convertLat900913To4326(lat) {
+    lat = parseFloat(lat);
     lat = lat * M_TO_DEG;
     return 2 * Math.atan(Math.exp(lat * DEG_TO_RAD)) * RAD_TO_DEG - 90;
 }
 
 function convertLon4326To900913(lon) {
+    lon = parseFloat(lon);
     return lon * DEG_TO_M;
 }
 
 function convertLat4326To900913(lat) {
+    lat = parseFloat(lat);
     lat = Math.log(Math.tan((90 + lat) * DEG_TO_RAD / 2)) * RAD_TO_DEG;
     lat = Math.max(-MAX_EXTENT, Math.min(MAX_EXTENT, lat));
     return lat * DEG_TO_M;

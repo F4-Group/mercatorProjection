@@ -2,8 +2,15 @@
     "name": "mercatorProjection",
     "description": "convert lat/lon between 900913 and 4326",
     "version": "0.1.0",
-    "main": "index.js",
+    "main": "mercatorProjection.js",
     "dependencies": {
         "geohash": "git://github.com/maxogden/geohash-js#master"
+    },
+    "devDependencies": {
+        "mocha": "1.17.x",
+        "should": "3.1.x"
+    },
+    "scripts": {
+        "test": "mocha test"
     }
 }
