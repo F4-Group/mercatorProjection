@@ -6,6 +6,17 @@ var DEG_TO_M = MAX_EXTENT / 180;
 var DEG_TO_RAD = Math.PI / 180;
 var RAD_TO_DEG = 180 / Math.PI;
 
+module.exports = {
+    MAX_EXTENT: MAX_EXTENT,
+    convertLon900913To4326: convertLon900913To4326,
+    convertLat900913To4326: convertLat900913To4326,
+    convertLon4326To900913: convertLon4326To900913,
+    convertLat4326To900913: convertLat4326To900913,
+    convert4326to900913: convert4326to900913,
+    convert900913to4326: convert900913to4326,
+    geoHashToLonLat: geoHashToLonLat,
+};
+
 function convertLon900913To4326(lon) {
     lon = parseFloat(lon);
     return lon * M_TO_DEG;
@@ -55,15 +66,3 @@ function geoHashToLonLat(geohash, convertSrid) {
 
     return lonLat;
 }
-
-module.exports = {
-    MAX_EXTENT: MAX_EXTENT,
-    convertLon900913To4326: convertLon900913To4326,
-    convertLat900913To4326: convertLat900913To4326,
-    convertLon4326To900913: convertLon4326To900913,
-    convertLat4326To900913: convertLat4326To900913,
-    convert4326to900913: convert4326to900913,
-    convert900913to4326: convert900913to4326,
-    geoHashToLonLat: geoHashToLonLat,
-
-};
